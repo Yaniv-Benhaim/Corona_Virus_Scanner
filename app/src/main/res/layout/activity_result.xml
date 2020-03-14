@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:background="@drawable/coronabg"
+    android:id="@+id/main_layout"
+    android:layout_height="match_parent"
+    tools:context=".ResultActivity">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrain_info"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/info_style"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/scan_again_btn"
+        android:layout_width="match_parent"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_height="200dp">
+        <TextView
+            android:id="@+id/result_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chance of Infection"
+            android:textStyle="bold"
+            android:textSize="26sp"
+            android:textColor="#fff"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+
+            android:id="@+id/actual_result_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="97%"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:textSize="50sp"
+            android:textColor="#FF0000"
+            app:layout_constraintTop_toBottomOf="@+id/result_id"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#903A7024"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Corona Virus Scanner"
+            android:textColor="#fff"
+            android:gravity="center|center_vertical"
+            android:textStyle="bold"
+            android:textSize="22sp"/>
+
+
+    </LinearLayout>
+
+
+    <Button
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/scan_again_btn"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/scan_button_style"
+        style="?android:attr/borderlessButtonStyle"
+        android:text="Scan Again"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:textSize="18sp"/>
+
+    <com.google.android.gms.ads.AdView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ad_result"
+        app:layout_constraintTop_toBottomOf="@+id/scan_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-7226067785329539/9122195177"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
